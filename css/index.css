@@ -1,0 +1,56 @@
+/*头部部分*/
+html{font-size: 100px}
+header{height: 0.42rem;background:#ff8a00;
+        display: flex; /*设置弹性布局属性*/
+        justify-content: space-around;/*设置主轴对齐方式，平均分布俩边留平均的一般宽度*/
+        align-items: center;/*侧轴对齐（垂直），取值为上下居中*/}
+header h1{font-size: 0}
+header h1 img{width: 1rem; height: 0.34rem}/*设置logo图片的宽高*/
+header .icon{font-size: 0}
+header .icon img{width: 0.23rem;height: 0.29rem;margin-left: 0.2rem;}
+
+/*底部部分*/
+footer{
+        background: #2f3130;
+        color: #939494;
+        padding: 0 0.15rem;/*设置底部容器的内边距*/
+        width: auto;
+}
+
+footer h2{ /*底部标题样式*/
+        font-size: 0.14rem;
+        height: 0.4rem;
+        line-height: 0.4rem;
+        border-bottom: 1px solid #3e403f;
+}
+footer .content { /*底部主体内容样式*/
+        padding: 0.15rem 0;
+}
+footer .content ul{display: flex;}/*设置手机客户端部分为弹性布局*/
+.content ul li{
+        flex: 1; /*设置每个li的大小占比为1：1*/
+        text-align: center;/*内容居中对齐*/
+        display: flex; /*设置li元素为弹性布局*/
+        justify-content:center; /*设置li里的元素为主轴对齐*/
+}
+.content li img{/*设置客户端图标的大小*/
+        width: 0.18rem;
+        height: 0.21rem;
+        margin-right: 0.16rem;/*将图片与客户端文字说明分开*/
+
+}
+
+footer .text{/*设置底部文字说明的样式*/
+        margin-top: 0.16rem;
+}
+
+footer p{font-size: 0.12rem}/*设置p标签里的字体*/
+
+footer .text p{
+        text-align: center;/*设置底部文本说明居中对*/
+        line-height: 0.18rem;/*设置底部文本的行高*/
+}
+footer{/*使用固定定位将底部内容固定在网页的最底部*/
+        position:fixed;
+        bottom: 0px;left: 0px;right: 0px;
+}
