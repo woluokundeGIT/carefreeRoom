@@ -1,56 +1,181 @@
-/*头部部分*/
-html{font-size: 100px}
-header{height: 0.42rem;background:#ff8a00;
-        display: flex; /*设置弹性布局属性*/
-        justify-content: space-around;/*设置主轴对齐方式，平均分布俩边留平均的一般宽度*/
-        align-items: center;/*侧轴对齐（垂直），取值为上下居中*/}
-header h1{font-size: 0}
-header h1 img{width: 1rem; height: 0.34rem}/*设置logo图片的宽高*/
-header .icon{font-size: 0}
-header .icon img{width: 0.23rem;height: 0.29rem;margin-left: 0.2rem;}
-
-/*底部部分*/
-footer{
-        background: #2f3130;
-        color: #939494;
-        padding: 0 0.15rem;/*设置底部容器的内边距*/
-        width: auto;
+/*广告图搜索框部分*/
+.slogan{
+    width: 100%;
+    height:2.24rem;
+    background-image: url("../image/index/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.slogan form{/*设置表单的位置*/
+    position: absolute;
+    bottom:0.1rem;
+    left: 0.2rem;
+}
+.slogan form .icon{/*设置表单中的图标样式*/
+    position: absolute;
+    bottom: 0.1rem;left: 0.1rem;
+    background-image: url("../image/index/seach.jpg");
+    background-size: cover;
+    width: 0.2rem;
+    height: 0.2rem;
+    z-index: 2;
+}
+.slogan form .search{/*设置表单中的搜索框*/
+    width: 2.8rem; height: 0.35rem;
+    border-radius: 6px;/*设置搜索框的边框半径*/
+    box-shadow:inset 3px 3px rgba(204, 204, 204, 0.39);/*设置搜索框的阴影*/
+    padding-left: 0.3rem;
 }
 
-footer h2{ /*底部标题样式*/
-        font-size: 0.14rem;
-        height: 0.4rem;
-        line-height: 0.4rem;
-        border-bottom: 1px solid #3e403f;
+/*导航条部分*/
+.navlist ul{/*ul的样式*/
+    font-size: 0.12rem;
+    width: 100%;
+    height: 1rem;/*设置导航条的高度*/
+    background:rgb(255,138,0);/*设置导航条的背景颜色*/
+    display: flex;/*设置导航条为弹性布局*/
+    justify-content:space-around;/*设置ul里的内容主轴对齐*/
 }
-footer .content { /*底部主体内容样式*/
-        padding: 0.15rem 0;
+.navlist ul li{/*设置li的样式*/
+    width: 0.55rem;height: 0.55rem;
+    color: white;
+    margin-top: 0.2rem;
+    text-align: center;
 }
-footer .content ul{display: flex;}/*设置手机客户端部分为弹性布局*/
-.content ul li{
-        flex: 1; /*设置每个li的大小占比为1：1*/
-        text-align: center;/*内容居中对齐*/
-        display: flex; /*设置li元素为弹性布局*/
-        justify-content:center; /*设置li里的元素为主轴对齐*/
+.navlist ul li a{/*设置li里的a标签的样式*/
+    color: white;
 }
-.content li img{/*设置客户端图标的大小*/
-        width: 0.18rem;
-        height: 0.21rem;
-        margin-right: 0.16rem;/*将图片与客户端文字说明分开*/
-
-}
-
-footer .text{/*设置底部文字说明的样式*/
-        margin-top: 0.16rem;
+.navlist ul li img{/*设置li中图片大小*/
+    width: 0.5rem;
 }
 
-footer p{font-size: 0.12rem}/*设置p标签里的字体*/
+/*广告图2*/
+.slogan2 img{
+    width: 100%;
+}
 
-footer .text p{
-        text-align: center;/*设置底部文本说明居中对*/
-        line-height: 0.18rem;/*设置底部文本的行高*/
+/*热门房源*/
+.hotHouse h2{/*设置热门房源标题样式*/
+    background-color:rgb(255,138,0);
+    padding: 0.1rem 0.16rem;
+    color: white;
 }
-footer{/*使用固定定位将底部内容固定在网页的最底部*/
-        position:fixed;
-        bottom: 0px;left: 0px;right: 0px;
+.hotHouse h2 span{
+    font-size: 0.12rem;
 }
+.houseList{padding: 0.1rem}
+.houseList ul li{/*热门房源列表*/
+    display: flex;
+    justify-content: space-between;
+    padding: 0.23rem 0.14rem;
+    border-bottom:1px solid red;
+}
+.houseList li:last-of-type{
+    border-bottom:none;
+}
+.houseList ul li img{/*热门房源图片样式*/
+    width: 0.8rem;
+    height: 0.8rem;
+}
+.houseList li .text h3{/*设置文本中标题样式*/
+    font-size: 0.18rem;
+    width: 1.87rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.houseList li .text p{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.02rem 0;
+}
+.houseList li .text p strong{
+    color: #ff8a00;
+}
+.houseList li .text p span{
+    color: #939494;
+}
+.houseList li .text h4 a{
+    display: inline-block;
+    font-size: 0.1rem;
+    width: 0.4rem;
+    background-color:rgb(244,247,249);
+}
+
+/*友情链接部分*/
+.blogroll .title{/*友情链接标题部分样式*/
+    display: flex;
+    font-size: 0.18rem;
+    border-bottom:0.5px solid #ff8a00;
+
+}
+.blogroll .title li{
+    flex: 1;
+    text-align: center;
+}
+.blogroll .title li:first-child{
+
+    border-bottom:1px solid #ff8a00;
+}
+.blogroll .title li .action{
+    color: #ff8a00;
+}
+.blogroll .content{/*友情连接主体样式*/
+    display: flex;
+
+}
+.blogroll .content ul{
+    flex: 1;
+    text-align:left;
+    padding-top:0.08rem ;
+    padding-bottom: 0.08rem;
+}
+.blogroll .content ul li{
+    padding-bottom:0.04rem;
+    padding-top:0.04rem;
+}
+
+/*下载部分*/
+.download{
+    display: flex;
+    flex: 1;
+    background:rgb(23,24,27);
+    position: fixed;
+    bottom: 0px;right: 0px;left: 0px;
+}
+.download .close{
+    height: 0.3rem;
+}
+.download .downLeft{
+    display: flex;
+    flex: 1;
+}
+.download .downLeft img{
+    height: 0.3rem;
+    padding: 0.1rem;
+}
+.download .downLeft .text{
+    padding-top: 0.05rem;
+    font-size: 0.14rem;
+    color: white;
+    line-height:0.21rem;
+}
+.download .downLeft .text p:first-child{
+    font-weight: bold;
+}
+.download .downLeft .text p:last-child{
+    font-size: 0.1rem;
+}
+.downRight{
+    background-color: #ff8a00;
+    width: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.downRight a{
+    color: white;
+    font-size: 0.2rem;
+}
+
