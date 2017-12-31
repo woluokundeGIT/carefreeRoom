@@ -1,0 +1,69 @@
+/*所在位置*/
+.location{
+    height: 0.3rem;
+    background-color: white;
+    line-height: 0.3rem;
+    padding-left: 0.2rem;
+}
+
+/*搜索框*/
+.search{
+    height: 0.56rem;
+    border: 1px solid;
+    text-align: center;
+    position: relative;
+}
+.search form{
+    position: absolute;
+    top: 0.1rem;left: 0.14rem;
+}
+.search form input{
+    height: 0.38rem;
+    width: 2.8rem;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #cccccc;
+    padding-left: 0.1rem;
+}
+.search form span{
+    position: absolute;
+    right: 0.5rem;top: 0.1rem;
+    display: inline-block;
+    height:0.38rem;
+}
+.search form a{
+    position: absolute;
+    top: 0.1rem;right: 0.15rem;
+
+}
+.search form a img{
+    display: inline-block;
+    height:0.2rem;
+}
+
+/*导航条部分*/
+.nav{
+    background-color: white;
+    height: 0.4rem;
+
+}
+.nav .title{/*标题栏样式*/
+    display: flex;
+    justify-content: space-around;
+}
+.nav .title li{
+    line-height: 0.4rem;
+}
+.nav .title .li h2{
+    display: flex;
+    align-items: center;
+}
+/*制作三角形*/
+.nav .title a span{
+    width: 0;
+    height: 0;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 2px solid red;
+}
+
