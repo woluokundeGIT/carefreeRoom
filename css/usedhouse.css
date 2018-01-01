@@ -9,7 +9,6 @@
 /*搜索框*/
 .search{
     height: 0.56rem;
-    border: 1px solid;
     text-align: center;
     position: relative;
 }
@@ -57,13 +56,177 @@
 .nav .title .li h2{
     display: flex;
     align-items: center;
+
+}
+.nav .title a{
+    position: relative;
 }
 /*制作三角形*/
-.nav .title a span{
-    width: 0;
-    height: 0;
-    border-left: 1px solid transparent;
-    border-right: 1px solid transparent;
-    border-top: 2px solid red;
+.nav .title a span{/*倒三角*/
+    position: absolute;
+    top: 0.05rem;left: 0.4rem;
+    width: 0;height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid red;
+}
+.triangle{/*正三角*/
+    position: absolute;
+    top: 0.05rem;left: 0.4rem;
+    width: 0;height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 8px solid red;
+}
+.navBody .region{/*区域部分*/
+    display: none;
+    background-color: white;
+    position: absolute;
+    height: 5rem;
+    background: rgba(0,0,0,0.5);
+}
+.show{
+    display: flex;
+    background-color: white;
+    position: absolute;
+    height: 5rem;
+    background: rgba(0,0,0,0.5);
+}
+.navBody .region ul{
+    height: 2.5rem;width:0.8rem;
+}
+.navBody .region ul li{
+    background-color: white;
+    text-align: center;
+    font-size:0.16rem;
+    height: 0.35rem;
+    line-height: 0.35rem;
+}
+.action{/*设置默认选中样式*/
+    background-color: white;
+}
+.action a{
+    color: #ff8a00;
+}
+.region ul:nth-child(1) li:nth-child(2){
+    height:2.15rem ;
+    background: #cccccc;
+}
+.region ul:nth-child(2){
+    width:1rem ;
+    background-color: white;
+}
+.region ul:nth-child(2) li{
+    font-size: 0.12rem;color: #939494;
+}
+.region ul:nth-child(2) li:nth-child(3){
+    color: #ff8a00;font-weight: bold;
+}
+.region ul:nth-child(3){
+    width:1.42rem ;
+    background-color: white;
+}
+.region ul:nth-child(3) li{
+    font-size: 0.12rem;color: #939494;
+}
+.region ul:nth-child(3) li:nth-child(1){
+    color: #ff8a00;font-weight: bold;
+}
+/*价格区域*/
+.navBody .price{
+    position: absolute;
+    display: none;
+    background-color: rgba(0,0,0,0.5);
+    height: 3.5rem;
+
+}
+.navBody .price ul{
+    padding: 0rem 0.2rem;
+    margin: 0px;
+    background-color: white;
+}
+.navBody .price ul li{
+
+    height: 0.35rem;line-height: 0.35rem;
+    width: 2.8rem;background-color:white;
+    border-bottom: 1px solid #939494;
+    color: #3e403f;
+}
+.navBody .price ul li:last-child{
+    border: none;
+}
+/*户型部分*/
+.navBody .houseType{
+    position: absolute;
+    padding: 0rem 0.2rem;
+    background-color: white;
+    height: 2.5rem;width: 2.8rem;
+
+}
+.navBody .houseType ul li{
+    height: 0.35rem;line-height: 0.35rem;
+    display: flex;
+    justify-content: space-between;
+}
+.navBody .houseType ul li span{/*改变复选框的颜色*/
+    height: 0.15rem;width: 0.15rem;
+    border: 1px solid #cccccc;
+    background-color: white;
+}
+.navBody .houseType ul li:nth-child(3) span{/*设置默认选中*/
+    border: 1px solid #ff8a00;
+    background-image: url("../image/SecondHandList/ok.png");
+}
+/*更多*/
+.navBody .more{
+    position: absolute;
+    padding: 0rem 0.22rem;
+    background-color: white;
+    display: none;
+}
+.navBody .more ul li{
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid #cccccc;
+}
+.navBody .more ul li span{
+    text-align: center;line-height: 0.25rem;
+    display: inline-block;
+    width: 0.61rem;height: 0.25rem;
+    border: 1px solid #cccccc;
+    justify-content: space-between;
+    margin-right: 0.05rem;margin-top: 0.15rem;
 }
 
+/*房子列表*/
+.houseList ul li{
+    margin: 0.1rem 0.2rem;
+    padding: 0.2rem 0px;
+    border-bottom: 1px solid #ff8a00;
+    display: flex;
+    flex: 1;
+}
+.houseList ul li img{
+    width: 0.8rem;height:0.8rem;
+}
+.houseList ul li div{
+    padding-left: 0.1rem;
+}
+.houseList ul li div p{
+    margin-top: 0.05rem;
+    color: #939494;
+}
+.houseList ul li div p:nth-child(2){
+    margin-top: 0.07rem;
+}
+.houseList ul li div p:nth-child(2) span{
+    margin-right: 0.1rem;
+    color:black;
+}
+.houseList ul li div p:nth-child(3) strong{
+    color: #ff8a00;
+}
+.houseList ul li:last-child{
+    border: none;
+
+}
